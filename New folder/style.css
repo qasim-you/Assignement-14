@@ -1,0 +1,24 @@
+body {
+    background-color: rgb(179, 172, 172);
+}
+.calculator {
+    width: 200px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    text-align: right;
+    font-size: 20px;
+  }
+  
+  button {
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    font-size: 20px;
+  }
+  
