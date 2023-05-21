@@ -8,6 +8,9 @@ function appendToResult(value) {
   function deleteResult() {
     document.getElementById('result').value = result.value.toString().slice(0,-1)
   }
+  function calculatePercentage(value) {
+    document.getElementById('result').value += value;
+}
   
   function calculateResult() {
     var result = document.getElementById('result').value;
