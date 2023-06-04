@@ -4,13 +4,13 @@
   box-sizing: border-box;
 }
 body {
-    background-color: rgb(179, 142, 172);
+    /* background-color: rgb(179, 142, 172); */
     display: flex;
     width: 100%;
     height: 100vh;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(45deg, #4567 ,#0a0a0a);
+    /* background: linear-gradient(45deg, #4567 ,#0a0a0a); */
 }
 .calculator {
    border: 1px solid #717377;
@@ -48,9 +48,3 @@ body {
     background-color:#99A98F;
     color: forestgreen;
   }
- 
-<<<<<<< HEAD
-  
-=======
-  
->>>>>>> 06e10f3ee6539b56b525d4b785e792b93fa53a76
