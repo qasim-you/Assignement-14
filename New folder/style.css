@@ -43,7 +43,7 @@ input {
 .button {
   border: none;
   width: 91px;
-   height: 48px; 
+  height: 48px;
 
   /* margin: 10px;  */
 
@@ -53,17 +53,21 @@ input {
   cursor: pointer;
   color: #fbfbfb;
   background-color: #150050;
- 
 }
-.button:hover{
-  background-color:  #301974;
+.button:hover {
+  background-color: #301974;
 }
 .w-btn {
   color: white;
   width: 115px;
   font-size: 23px;
   background-color: #a628d0;
-  background-image: linear-gradient(75deg, #DD58D6 0%, #a628d0 35%, #9336B4 100%); 
+  background-image: linear-gradient(
+    75deg,
+    #dd58d6 0%,
+    #a628d0 35%,
+    #9336b4 100%
+  );
 }
 .fa-solid {
   font-size: 2rem;
@@ -78,20 +82,24 @@ input {
 /* .container-input {
   background-color: rgb(59, 54, 54);
 } */
-.color{
-
+.color {
   /* background-image: linear-gradient(90deg, #020024 0%, #090979 35%, #00d4ff 100%); */
-  
-
 }
-.btn{
-  background-color:#a628d0 ;
-  
+.btn {
+  background-color: #a628d0;
 }
-.btn-1{
-  background-color: #150050 ;
+.btn-1 {
+  background-color: #150050;
   border-radius: 20px;
 }
-.cl{
-  background-image: linear-gradient(75deg, #DD58D6 0%, #a628d0 35%, #9336B4 100%); 
+.cl {
+  background-image: linear-gradient(
+    75deg,
+    #dd58d6 0%,
+    #a628d0 35%,
+    #9336b4 100%
+  );
+}
+.hidden {
+  display: none;
 }

@@ -14,19 +14,19 @@
   <body>
     <div class="calculator">
       <div class="container-input">
-        <input type="text" id="result" class="input-field" />
-        <button class="togle">
+        <input type="text" id="result" name="result" class="input-field" />
+        <button class="togle" onclick="togglePageContent()">
           <span class="toggle-icon"
             ><i class="fa-solid fa-bars-staggered"></i
           ></span>
         </button>
       </div>
-      <div class="btn">
+      <div class="btn " id="pageContent">
         <div class="color">
-          <button class="button w-btn" onclick="clearResult()">Deg</button>
+          <button class="button w-btn" onclick="calculator()">Deg</button>
 
-          <button class="button w-btn" onclick="deleteResult()">( )</button>
-          <button class="button w-btn" onclick="calculatePercentage('%')">
+          <button class="button w-btn" onclick="appendToResult('()')">( )</button>
+          <button class="button w-btn" onclick="appendToResult('')">
             exp
           </button>
           <button class="button w-btn" onclick="appendToResult('/')">log</button>
@@ -62,7 +62,7 @@
           <button class="button" onclick="appendToResult('5')">M-</button>
           <button class="button" onclick="appendToResult('6')">MR</button>
           <button class="button" onclick="appendToResult('+')">MC</button>
-          <button class="button" onclick="appendToResult('+')"><img src="./image 1.png" alt=""></button>
+          <button class="button" onclick="deleteResult()"><img src="./image 1.png" alt=""></button>
         </div>
         <div>
           <button class="button" onclick="appendToResult('1')">7</button>
@@ -76,7 +76,7 @@
           <button class="button" onclick="appendToResult('0')">5</button>
           <button class="button" onclick="appendToResult('00')">6</button>
           <button class="button" onclick="appendToResult('.')">x</button>
-          <button class="button equal" onclick="calculateResult()">%</button>
+          <button class="button equal" onclick=" percent(this.form.display)">%</button>
         </div>
         <div>
           <button class="button" onclick="appendToResult('0')">1</button>

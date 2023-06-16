@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Show/Hide Page Content</title>
+  <style>
+    .hidden {
+      display: none;
+    }
+  </style>
+  <script>
+    function togglePageContent() {
+      var pageContent = document.getElementById("pageContent");
+      pageContent.classList.toggle("hidden");
+    }
+  </script>
+</head>
+<body>
+  <button onclick="togglePageContent()">Toggle Content</button>
+  <div id="pageContent">
+    <!-- Content of the page goes here -->
+    <h1>Welcome to the other page!</h1>
+    <p>This is some content that will be hidden/shown.</p>
+  </div>
+</body>
+</html>
