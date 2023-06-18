@@ -15,18 +15,24 @@ body {
 
 input {
   position: relative;
-  width: 357px;
-  height: 41px;
+  width: 244px;
+  height: 54px;
   border: transparent;
   box-shadow: 0px 3px 15px rgba(219, 224, 231, 0.2);
-  padding: 54px;
+  padding: 27px;
   background: transparent;
-  font-size: 60px;
+  font-size: 35px;
   /* margin: 10px;  */
   text-align: right;
   cursor: pointer;
   color: rgb(83, 50, 83);
   border-radius: 15px;
+  font-family: 'Roboto', sans-serif;
+}
+
+input:focus {
+  outline: none; /* Remove the default focus outline */
+  border: none; /* Remove the border when focused */
 }
 .container-input {
   position: relative;
@@ -34,33 +40,32 @@ input {
 .container-input span {
   cursor: pointer;
   position: absolute;
-  left: 15px;
-  top: 22%;
+  left: 18px;
+  top: 17%;
   transform: translateY(-50%);
   border: none;
 }
 
 .button {
+  font-family: 'Roboto', sans-serif;
   border: none;
-  width: 91px;
+  width: 58px;
   height: 48px;
 
-  /* margin: 10px;  */
-
-  /* border-radius: 50%; */
   font-size: 28px;
   text-align: center;
   cursor: pointer;
   color: #fbfbfb;
-  background-color: #150050;
+  background-color: #030038;
 }
 .button:hover {
   background-color: #301974;
 }
 .w-btn {
   color: white;
-  width: 115px;
-  font-size: 23px;
+  font-family: 'Roboto', sans-serif;
+    width: 73px;
+    font-size: 23px;
   background-color: #a628d0;
   background-image: linear-gradient(
     75deg,
@@ -69,28 +74,32 @@ input {
     #9336b4 100%
   );
 }
+.w-btn:hover{
+  background-color: #c34af0;
+  background-image: linear-gradient(
+    75deg,
+    #dd58d6 0%,
+    #8c2bac 35%,
+    #6d3083 100%
+  );
+}
 .fa-solid {
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 .calculator {
   border: 1px solid #fbfbfb;
-  border-radius: 30px;
+  border-radius: 33px;
 }
 .radius {
   border-radius: 12px;
 }
-/* .container-input {
-  background-color: rgb(59, 54, 54);
-} */
-.color {
-  /* background-image: linear-gradient(90deg, #020024 0%, #090979 35%, #00d4ff 100%); */
-}
+
 .btn {
   background-color: #a628d0;
 }
 .btn-1 {
-  background-color: #150050;
-  border-radius: 20px;
+  background-color: #030038;
+  border-radius: 25px;
 }
 .cl {
   background-image: linear-gradient(
@@ -102,4 +111,7 @@ input {
 }
 .hidden {
   display: none;
+}
+#content{
+  
 }

@@ -4,99 +4,106 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Calculator</title>
     <link rel="stylesheet" href="./style.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
   </head>
   <body>
     <div class="calculator">
       <div class="container-input">
-        <input type="text" id="result" name="result" class="input-field" />
+        <input type="text" id="result"  class="input-field" placeholder="0" readonly/>
         <button class="togle" onclick="togglePageContent()">
           <span class="toggle-icon"
             ><i class="fa-solid fa-bars-staggered"></i
           ></span>
         </button>
       </div>
-      <div class="btn " id="pageContent">
+      <div class="btn hidden" id="content">
         <div class="color">
           <button class="button w-btn" onclick="calculator()">Deg</button>
 
-          <button class="button w-btn" onclick="appendToResult('()')">( )</button>
-          <button class="button w-btn" onclick="appendToResult('')">
-            exp
+          <button class="button w-btn" onclick="appendNumber('(')"> ( </button>
+          <button class="button w-btn" onclick="appendNumber(')')">
+          )
           </button>
-          <button class="button w-btn" onclick="appendToResult('/')">log</button>
+          <button class="button w-btn" onclick="expPow()">exp</button>
         </div>
         <div class="color">
-          <button class="button w-btn" onclick="appendToResult('7')">sin</button>
-          <button class="button w-btn" onclick="appendToResult('8')">cos</button>
-          <button class="button w-btn" onclick="appendToResult('9')">tan</button>
-          <button class="button w-btn" onclick="appendToResult('*')">1/X</button>
+          <button class="button w-btn" onclick="calculateSin()">sin</button>
+          <button class="button w-btn" onclick="calculateCos()">cos</button>
+          <button class="button w-btn" onclick="calculateTan()">tan</button>
+          <button class="button w-btn" onclick="calculateReciprocal()">1/X</button>
         </div>
         <div class="color">
-          <button class="button w-btn" onclick="appendToResult('7')">sin<sup>-1</sup></button>
-          <button class="button w-btn" onclick="appendToResult('8')">cos<sup>-1</sup></button>
-          <button class="button w-btn" onclick="appendToResult('9')">tan<sup>-1</sup></button>
-          <button class="button w-btn" onclick="appendToResult('*')">e</button>
+          <button class="button w-btn" onclick="calculateSinInverse()">sin<sup>-1</sup></button>
+          <button class="button w-btn" onclick="calculateCosInverse()">cos<sup>-1</sup></button>
+          <button class="button w-btn" onclick="calculateTanInverse()">tan<sup>-1</sup></button>
+          <button class="button w-btn" onclick="e()">e</button>
         </div>
         <div class="color">
-          <button class="button w-btn" onclick="appendToResult('7')">sin h</button>
-          <button class="button w-btn" onclick="appendToResult('8')">cos h</button>
-          <button class="button w-btn" onclick="appendToResult('9')">tan h</button>
-          <button class="button w-btn" onclick="appendToResult('*')">ln</button>
+          <button class="button w-btn" onclick="calculateSinHyper()">sin h</button>
+          <button class="button w-btn" onclick="calculateCosHyper()">cos h</button>
+          <button class="button w-btn" onclick="calculateTanHyper()">tan h</button>
+          <button class="button w-btn" onclick="log()">log</button>
         </div>
         <div class="color">
-          <button class="button w-btn" onclick="appendToResult('7')">Xi</button>
-          <button class="button w-btn" onclick="appendToResult('8')">X <sup>2</sup></button>
-          <button class="button w-btn" onclick="appendToResult('9')">X <sup>3</sup></button>
-          <button class="button w-btn" onclick="appendToResult('*')">&#928;</button>
+          <button class="button w-btn" onclick="powOne()">Xi</button>
+          <button class="button w-btn" onclick="pow()">X <sup>2</sup></button>
+          <button class="button w-btn" onclick="powCube()">X <sup>3</sup></button>
+          <button class="button w-btn" onclick="pi()">&#928;</button>
         </div>
       </div>
       <div class="btn-1">
         <div>
-          <button class="button" onclick="appendToResult('4')">M+</button>
-          <button class="button" onclick="appendToResult('5')">M-</button>
-          <button class="button" onclick="appendToResult('6')">MR</button>
-          <button class="button" onclick="appendToResult('+')">MC</button>
+          <button class="button" onclick="addToMemory()">M+</button>
+          <button class="button" onclick="subtractFromMemory()">M-</button>
+          <button class="button" onclick="memoryRecall()">MR</button>
+          <button class="button" onclick="memoryClear()">MC</button>
           <button class="button" onclick="deleteResult()"><img src="./image 1.png" alt=""></button>
         </div>
         <div>
-          <button class="button" onclick="appendToResult('1')">7</button>
-          <button class="button" onclick="appendToResult('1')">8</button>
-          <button class="button" onclick="appendToResult('2')">9</button>
-          <button class="button" onclick="appendToResult('3')">&#247;</button>
-          <button class="button" onclick="appendToResult('-')">C</button>
+          <button class="button" onclick="appendToResult('7')">7</button>
+          <button class="button" onclick="appendToResult('8')">8</button>
+          <button class="button" onclick="appendToResult('9')">9</button>
+          <button class="button" onclick="appendToResult('/')">&#247;</button>
+          <button class="button" onclick="clearResult() ">C</button>
         </div>
         <div>
-          <button class="button" onclick="appendToResult('0')">4</button>
-          <button class="button" onclick="appendToResult('0')">5</button>
-          <button class="button" onclick="appendToResult('00')">6</button>
-          <button class="button" onclick="appendToResult('.')">x</button>
-          <button class="button equal" onclick=" percent(this.form.display)">%</button>
+          <button class="button" onclick="appendToResult('4')">4</button>
+          <button class="button" onclick="appendToResult('5')">5</button>
+          <button class="button" onclick="appendToResult('6')">6</button>
+          <button class="button" onclick="appendToResult('*')">x</button>
+          <button class="button equal" onclick="calculatePercentage()">%</button>
         </div>
         <div>
-          <button class="button" onclick="appendToResult('0')">1</button>
-          <button class="button" onclick="appendToResult('0')">2</button>
-          <button class="button" onclick="appendToResult('00')">3</button>
-          <button class="button" onclick="appendToResult('.')">-</button>
-          <button class="button equal" onclick="calculateResult()">√</button>
+          <button class="button" onclick="appendToResult('1')">1</button>
+          <button class="button" onclick="appendToResult('2')">2</button>
+          <button class="button" onclick="appendToResult('3')">3</button>
+          <button class="button" onclick="appendToResult('-')">-</button>
+          <button class="button "onclick="sqrRoot('√')">√</button>
         </div>
         <div>
           <button class="button radius" onclick="appendToResult('0')">0</button>
-          <button class="button" onclick="appendToResult('0')">.</button>
+          <button class="button" onclick="appendToResult('.')">.</button>
           <button class="button" onclick="appendToResult('00')">00</button>
-          <button class="button" onclick="appendToResult('.')">+</button>
-          <button class="button equal radius cl" onclick="calculateResult()">
+          <button class="button" onclick="appendToResult('+')">+</button>
+          <button class="button equal radius cl" onclick="calculateResult()  ">
             =
           </button>
         </div>
       </div>
       
-    </div>
+
+
+
+
+ 
 
     <script src="./index.js"></script>
   </body>
