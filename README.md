@@ -1,2 +1,2 @@
 # Assignement-14
-Calculator in js html css js
+Calculator in js Html Css js
