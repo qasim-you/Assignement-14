@@ -191,7 +191,6 @@ function calculatePercentage() {
 
 
 
-
 function calculateResult() {
   var result = document.getElementById("result").value;
   try {
